@@ -1,37 +1,58 @@
 <html>
-  <head>
-    <title>HotNews.ro</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              hotblue: '#2145ac',
-              hotgreen: '#3f9863',
-              hotred: '#eb3223'
-            }
+<head>
+  <title>HotNews.ro</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        minheight: '90px',
+        extend: {
+          width: '1349px',
+          height: {
+            height: '90px',
+            height2: '52px',
+            height3: '22px'
+          },
+          colors: {
+            hotblue: '#2145ac',
+            hotgreen: '#3f9863',
+            hotred: '#eb3223'
           }
         }
       }
-    </script>
-  </head>
-  <body>
-    <div class="flex max-w-5xl mx-auto px-4 py-1.5 text-sm font-medium">
-      <div class="flex grow items-center">
-        <img src="https://hotnews.ro/static/assets/icons/ic_updated.svg" alt="updated_icon">
-        <div class="text-hotblue">Actualizat acum un minut</div>
-      </div>
-      <div class="flex shrink">
-        <div class="text-hotblue pr-1">EUR</div>
-        <div class="text-hotgreen pr-1">4.9395</div>
-        <div class="text-hotblue pr-1">USD</div>
-        <div class="text-hotred">4.8195</div>
+    }
+  </script>
+</head>
+
+<body>
+  <div class="flex max-w-5xl mx-auto px-4 py-1.5 text-sm font-medium">
+    <div class="flex grow items-center">
+      <img src="https://hotnews.ro/static/assets/icons/ic_updated.svg" alt="updated_icon">
+      <div class="text-hotblue">Actualizat acum un minut</div>
+    </div>
+    <div class="flex shrink">
+      <div class="text-hotblue pr-1">EUR</div>
+      <div class="text-hotred pr-1">4.9395</div>
+      <div class="text-hotblue pr-1">USD</div>
+      <div class="text-hotgreen">4.8195</div>
+    </div>
+  </div>
+  <div class="bg-hotblue">
+    <div class=' mx-auto max-w-5xl h-[90px] flex'>
+      <div class="items-center justify-between flex grow">
+        <a href="../hotnews/index.html"><img class="h-[52px] cursor-pointer"
+            src="https://www.hotnews.ro/static/assets/logos/hotnews_header.svg" alt="hotnews-logo"></a>
+        <div class="flex shrink">
+          <img class="m-2.5 h-[22px]" src="https://www.hotnews.ro/static/assets/icons/ic_search.svg" alt="Search-Icon">
+          <img class="m-2.5 h-[22px]" src="https://www.hotnews.ro/static/assets/icons/ic_user.svg" alt="User-Icon">
+          <img class="m-2.5 h-[22px]" src="https://www.hotnews.ro/static/assets/icons/ic_menu.svg" alt="Burger-Menu">
+        </div>
       </div>
     </div>
-    <div class='bg-hotblue h-10'>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>

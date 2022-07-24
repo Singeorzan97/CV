@@ -3,23 +3,46 @@
 <head>
   <title>HotNews.ro</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
+  <link rel="stylesheet" href="hotnews.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
+        fontSize: {
+          font: '15px',
+          font2: '18px',
+          font3: '14px'
+        },
+        fontFamily: {
+          sans: ["Inter", "sans-serif"]
+        },
         minheight: '90px',
         extend: {
+          padding: {
+            paddingleft: '22px'
+          },
           width: '1349px',
           height: {
             height: '90px',
             height2: '52px',
-            height3: '22px'
+            height3: '22px',
+            height4: '50px'
           },
           colors: {
             hotblue: '#2145ac',
             hotgreen: '#3f9863',
-            hotred: '#eb3223'
+            hotred: '#eb3223',
+            hotblack: '#393939',
+            hotEconomie: '#ed5c43',
+            hotSport: '#36a562',
+            hotLife: '#d0459e',
+            hotScience: '#767fea',
+            hotRevista: '#484848',
+            hotDosare: '9d8562',
+            hotHome: '2145ac',
+            hotWhite: '#fff',
+            hotWar: '#ffa900'
           }
         }
       }
@@ -28,12 +51,12 @@
 </head>
 
 <body>
-  <div class="flex max-w-5xl mx-auto px-4 py-1.5 text-sm font-medium">
+  <div class="flex max-w-5xl mx-auto px-4 py-1.5 text-sm font-medium text-[14px]">
     <div class="flex grow items-center">
       <img src="https://hotnews.ro/static/assets/icons/ic_updated.svg" alt="updated_icon">
       <div class="text-hotblue">Actualizat acum un minut</div>
     </div>
-    <div class="flex shrink">
+    <div class="flex shrink text-[14px]">
       <div class="text-hotblue pr-1">EUR</div>
       <div class="text-hotred pr-1">4.9395</div>
       <div class="text-hotblue pr-1">USD</div>
@@ -41,10 +64,11 @@
     </div>
   </div>
   <div class="bg-hotblue">
-    <div class=' mx-auto max-w-5xl h-[90px] flex'>
+    <div class='mx-auto max-w-5xl h-[90px] flex'>
       <div class="items-center justify-between flex grow">
-        <a href="../hotnews/index.html"><img class="h-[52px] cursor-pointer"
-            src="https://www.hotnews.ro/static/assets/logos/hotnews_header.svg" alt="hotnews-logo"></a>
+        <a href="../hotnews/index.html">
+          <img class="h-[52px] cursor-pointer" src="https://www.hotnews.ro/static/assets/logos/hotnews_header.svg"
+            alt="hotnews-logo"></a>
         <div class="flex shrink">
           <img class="m-2.5 h-[22px]" src="https://www.hotnews.ro/static/assets/icons/ic_search.svg" alt="Search-Icon">
           <img class="m-2.5 h-[22px]" src="https://www.hotnews.ro/static/assets/icons/ic_user.svg" alt="User-Icon">
@@ -53,6 +77,31 @@
       </div>
     </div>
   </div>
+  <section
+    class="p-[22px] text-hotblack mx-auto text-[18px] font-bold font-['Inter', 'sans-serif'] flex  h-14 items-center max-w-5xl">
+    <a class="pr-5 text-hotHome" href="https://www.hotnews.ro/">HOME</a>
+    <a class="pr-5 hover:text-hotEconomie" href="https://economie.hotnews.ro/">ECONOMIE</a>
+    <a class="pr-5 hover:text-hotSport" href="https://sport.hotnews.ro/">SPORT</a>
+    <a class="pr-5 hover:text-hotLife" href="https://life.hotnews.ro/">LIFE</a>
+    <a class="pr-5 hover:text-hotScience" href="https://science.hotnews.ro/">SCIENCE</a>
+    <a class="pr-5 hover:text-hotRevista" href="https://revistapresei.hotnews.ro/">REVISTA PRESEI</a>
+    <a class="pr-5 hover:text-hotDosare" href="https://www.hotnews.ro/dosare_juridice">DOSARE JURIDICE</a>
+  </section>
+
+  <div class="bg-hotblue">
+    <section
+      class="p-[22px] h-[50px] flex mx-auto max-w-5xl font-['Inter', 'sans-serif'] items-center text-hotWhite text-[15px] ">
+      <a class="pr-5 text-hotWar" href="https://www.hotnews.ro/razboi_ucraina">Război în Ucraina</a>
+      <a class="pr-5" href="https://www.hotnews.ro/coronavirus">Coronavirus</a>
+      <a class="pr-5" href="https://www.hotnews.ro/politic">Politic</a>
+      <a class="pr-5" href="https://www.hotnews.ro/educatie">Educație</a>
+      <a class="pr-5" href="https://www.hotnews.ro/sanatate">Sănătate</a>
+      <a class="pr-5" href="https://www.hotnews.ro/opinii">Opinii</a>
+      <a class="pr-5" href="https://www.hotnews.ro/infrastructura_articole">Infrastructură</a>
+      <a class="pr-5" href="https://www.hotnews.ro/administratie_locala">Administrație</a>
+    </section>
+  </div>
+
 </body>
 
 </html>

@@ -9,40 +9,74 @@
   <script>
     tailwind.config = {
       theme: {
+        borderWidth: {
+          3: '3px',
+          1: '1px'
+        },
+        letterSpacing: {
+          0.8: '.08em',
+          0.07: '07em'
+        },
         fontSize: {
           font: '15px',
           font2: '18px',
-          font3: '14px'
+          font3: '14px',
+          font4: '13px',
+          font5: '11px',
+          font6: '20px',
+          font7: '3px',
+          font8: '11px'
         },
         fontFamily: {
-          sans: ["Inter", "sans-serif"]
+          sans: ["Inter", "sans-serif"],
+          Literata: ["Literata", "serif"],
+          Inter2: ["Inter2", "sans-serif"]
         },
         minheight: '90px',
         extend: {
+          GridRowTemplates:  {
+            'layout': '200px minmax(900px, 1fr) 100px',
+          },
+          width: {
+            976: '976px',
+            619: '619px',
+            539: '539px',
+            589: '589px',
+            619: '619px',
+            300: '300px'
+          },
           padding: {
-            paddingleft: '22px'
+            5.5: '22px',
+            4.5: '19px',
+            1.5: '7px',
+            4.6: '18px'
           },
           width: '1349px',
           height: {
             height: '90px',
             height2: '52px',
             height3: '22px',
-            height4: '50px'
+            height4: '50px',
+            height5: '638px',
+            height6: '335px',
+            height7: '615px'
           },
           colors: {
             hotblue: '#2145ac',
             hotgreen: '#3f9863',
             hotred: '#eb3223',
             hotblack: '#393939',
-            hotEconomie: '#ed5c43',
-            hotSport: '#36a562',
-            hotLife: '#d0459e',
-            hotScience: '#767fea',
-            hotRevista: '#484848',
-            hotDosare: '9d8562',
-            hotHome: '2145ac',
+            hotBurntSienna: '#ed5c43',
+            hotChateauGreen: '#36a562',
+            hotMulberry: '#d0459e',
+            hotCornflowerBlue: '#767fea',
+            hotTundora: '#484848',
+            hotBarleyCorn: '9d8562',
+            hotPersianBlue: '2145ac',
             hotWhite: '#fff',
-            hotWar: '#ffa900'
+            hotWebOrange: '#ffa900',
+            hotPotPourri: '#F7E9E9',
+            hotOsloGray: '#86898A'
           }
         }
       }
@@ -52,7 +86,7 @@
 
 <body>
   <div class="flex max-w-5xl mx-auto px-4 py-1.5 text-sm font-medium text-[14px]">
-    <div class="flex grow items-center">
+    <div class="flex mx-2 md:mx-5 grow items-center">
       <img src="https://hotnews.ro/static/assets/icons/ic_updated.svg" alt="updated_icon">
       <div class="text-hotblue">Actualizat acum un minut</div>
     </div>
@@ -65,9 +99,9 @@
   </div>
   <div class="bg-hotblue">
     <div class='mx-auto max-w-5xl h-[90px] flex'>
-      <div class="items-center justify-between flex grow">
+      <div class="items-center justify-between mx-5 flex grow">
         <a href="../hotnews/index.html">
-          <img class="h-[52px] cursor-pointer" src="https://www.hotnews.ro/static/assets/logos/hotnews_header.svg"
+          <img class="md:h-[52px] h-10 cursor-pointer" src="https://www.hotnews.ro/static/assets/logos/hotnews_header.svg"
             alt="hotnews-logo"></a>
         <div class="flex shrink">
           <img class="m-2.5 h-[22px]" src="https://www.hotnews.ro/static/assets/icons/ic_search.svg" alt="Search-Icon">
@@ -77,31 +111,94 @@
       </div>
     </div>
   </div>
+  
   <section
-    class="p-[22px] text-hotblack mx-auto text-[18px] font-bold font-['Inter', 'sans-serif'] flex  h-14 items-center max-w-5xl">
-    <a class="pr-5 text-hotHome" href="https://www.hotnews.ro/">HOME</a>
-    <a class="pr-5 hover:text-hotEconomie" href="https://economie.hotnews.ro/">ECONOMIE</a>
-    <a class="pr-5 hover:text-hotSport" href="https://sport.hotnews.ro/">SPORT</a>
-    <a class="pr-5 hover:text-hotLife" href="https://life.hotnews.ro/">LIFE</a>
-    <a class="pr-5 hover:text-hotScience" href="https://science.hotnews.ro/">SCIENCE</a>
-    <a class="pr-5 hover:text-hotRevista" href="https://revistapresei.hotnews.ro/">REVISTA PRESEI</a>
-    <a class="pr-5 hover:text-hotDosare" href="https://www.hotnews.ro/dosare_juridice">DOSARE JURIDICE</a>
-  </section>
+    class=" pl-[22px] hidden text-hotblack mx-auto text-[18px] font-bold font-['Inter', 'sans-serif' ] md:flex  h-[50px]  items-center w-[976px]">
+    <a class="pr-5 text-hotPersianBlue" href="https://www.hotnews.ro/">HOME</a>
+    <a class="pr-5 hover:text-hotBurntSienna" href="https://economie.hotnews.ro/">ECONOMIE</a>
+    <a class="pr-5 hover:text-hotChateauGreen" href="https://sport.hotnews.ro/">SPORT</a>
+    <a class="pr-5 hover:text-hotMulberry" href="https://life.hotnews.ro/">LIFE</a>
+    <a class="pr-5 hover:text-hotCornflowerBlue" href="https://science.hotnews.ro/">SCIENCE</a>
+    <a class="pr-5 hover:text-hotTundora inline-block" href="https://revistapresei.hotnews.ro/">REVISTA PRESEI</a>
+    <a class="hover:text-hotBarleyCorn" href="https://www.hotnews.ro/dosare_juridice">DOSARE JURIDICE</a>
+  </section> 
 
   <div class="bg-hotblue">
     <section
-      class="p-[22px] h-[50px] flex mx-auto max-w-5xl font-['Inter', 'sans-serif'] items-center text-hotWhite text-[15px] ">
-      <a class="pr-5 text-hotWar" href="https://www.hotnews.ro/razboi_ucraina">Război în Ucraina</a>
+      class="pl-[22px] hidden h-[50px] md:flex mx-auto mb-9  w-[976px] font-['Inter', 'sans-serif'] items-center text-hotWhite text-[15px] ">
+      <a class="pr-5 text-hotWebOrange" href="https://www.hotnews.ro/razboi_ucraina">Război în Ucraina</a>
       <a class="pr-5" href="https://www.hotnews.ro/coronavirus">Coronavirus</a>
       <a class="pr-5" href="https://www.hotnews.ro/politic">Politic</a>
       <a class="pr-5" href="https://www.hotnews.ro/educatie">Educație</a>
       <a class="pr-5" href="https://www.hotnews.ro/sanatate">Sănătate</a>
       <a class="pr-5" href="https://www.hotnews.ro/opinii">Opinii</a>
       <a class="pr-5" href="https://www.hotnews.ro/infrastructura_articole">Infrastructură</a>
-      <a class="pr-5" href="https://www.hotnews.ro/administratie_locala">Administrație</a>
+      <a href="https://www.hotnews.ro/administratie_locala">Administrație</a>
     </section>
   </div>
+  <section class="pl-[19px] text-[18px] font-['Inter', 'sans-serif'] md:hidden font-bold h-[50px] flex items-center ">
+    <a class="text-hotPersianBlue pr-2 " href="">HOME</a>
+    <a href="">ULTIMA ORA</a>
+  </section>
+<div class="flex w-[976px] mx-auto">
+  <div class="w-[619px]">
+  <article class="rounded-md w-[619px] h-[638px] bg-[#F7E9E9] mt-4">
+    <div class="px-4 pt-4 ">
+    <a href="https://www.hotnews.ro/stiri-razboi_ucraina-25696395-razboi-ucraina-ziua-152-rusia-invazie-zelenski-putin.htm">
+    <figure>
+      <img src="./assets/Razboi Ucraina.webp" alt="Live Razboi in Ucraina">
+    </figure>
+    </a>
+  </div>
+  <p class="mt-4 mb-2.5">
+    <span class="text-hotPersianBlue font-medium pr-0  px-4 text-[13px]">06:44 •</span> <span class=" rounded-md py-1 pr-1.5 pl-2  text-white bg-[#2145ac] text-[11px] font-normal tracking-[.08em]">Ultima Stire - 16:25</span> 
+  </p>
+  <a href="https://www.hotnews.ro/stiri-razboi_ucraina-25700059-live-razboi-ucraina-ziua-154-miercuri-dimineata-reinceput-atacurile-rusiei-harkov-ministerul-rus-apararii-anuntat-exercitii-militare-strategice-estul-tarii-ucraina-intentioneaza-incheie-acord-pentru-1.htm">
+  <h1 class="px-4 text-[18px] font-semibold">
+    LIVE Război în Ucraina, ziua 154: Ucraina atacă teritoriul Rusiei cu arme americane și bombardează cu HIMARS cel mai mare pod peste Nipru / Rușii atacă noi localități, iar separatiștii cer capturarea de noi teritorii înainte de referendumurile de anexare la Federația Rusă
+</h1>
+<p class="font-[Literata] px-4 text-base font-normal mt-1.5 mb-2.5 text-hotblack ">
+  Forțele ruse au capturat a doua cea mai mare centrală electrică a Ucrainei, iar Moscova întreprinde o „redistribuire masivă” a trupelor în trei regiuni din sud. Cu toate acestea, președintele ucrainean Volodimir...
+</p>
+  </a>
+  <div class=" flex pl-4 pb-2.5 justify-between  ">
+    <img src="./assets/share_gray.svg" alt="Share Gray">
+    <div class=" pr-4 pt-2.5 flex ">
+     <img src="./assets/comment_gray.svg" alt="Comment Gray"> 
+     <span class="text-[13px] ml-1.5 text-hotOsloGray">9</span>
+      </div>
+  </div>
+  </article>
+</div>
+<section class="px-4 ">
+  <div class="flex pt-3">
+    <img class="pr-1" src="./assets/ic_sun.svg" alt="Ultima Ora">
+    <a class="text-[20px] font-extrabold text-hotPersianBlue tracking-[.07em] " href="https://www.hotnews.ro/ultima_ora">ULTIMA ORA</a>
+  </div>
+<div class="border-b-[3px] border-solid border-hotPersianBlue pb-2.5 w-[300px]"></div>
+<article class="pt-[18px]  text-[13px] text-hotBurntSienna">
+  <a href="https://economie.hotnews.ro/stiri-energie-25703257-putea-europa-apela-setsuden-controversata-strategie-japoneza-economisire-energiei-electrice.htm"><span>14:28 • 
+    <span class="border-[#ed5c43] font-semibold tracking-[.08em] py-0.5 pr-[7px] pl-2 text-[11px] rounded-md border-x-[1px] border-y-[1px] border-solid ">ECONOMIE</span>
+    </span>
+  </a>
+</article>
+<div class="mt-2">
+  <a href="https://economie.hotnews.ro/stiri-energie-25703257-putea-europa-apela-setsuden-controversata-strategie-japoneza-economisire-energiei-electrice.htm">Ar putea fi Europa nevoită să apeleze la „Setsuden”, strategia japoneză de economisire a energiei electrice?
+  </a>
+</div>
+
+</section>
+
+</div>
+
+
+
+
 
 </body>
 
 </html>
+
+
+
+            

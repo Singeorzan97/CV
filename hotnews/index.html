@@ -10,9 +10,10 @@
     tailwind.config = {
       theme: {
           fontSize: {
-          font15: '15px',
-          font18: '18px',
-          font14: '14px'
+         'sm-1': '15px',
+          'base-1': '18px',
+          'sm': '14px'
+          
         },
 
         fontFamily: {
@@ -58,7 +59,7 @@
 </head>
 
 <body>
-  <div class="flex max-w-5xl mx-auto px-4 py-1.5 text-font3 font-medium">
+  <div class="flex max-w-5xl mx-auto px-4 py-1.5 text-sm font-medium">
     <div class="flex mx-2 md:mx-5 grow items-center">
       <img src="https://hotnews.ro/static/assets/icons/ic_updated.svg" alt="updated_icon">
       <div class="text-hotblue">Actualizat acum un minut</div>
@@ -86,7 +87,7 @@
   </div>
   
   <section
-    class=" pl-5.5  hidden text-hotblack mx-auto text-font18 font-bold md:flex  h-12.3 w-976  items-center ">
+    class=" pl-5.5  hidden text-hotblack mx-auto text-base-1 font-bold md:flex  h-12.3 w-976  items-center ">
     <a class="pr-5 text-hotPersianBlue" href="https://www.hotnews.ro/">HOME</a>
     <a class="pr-5 hover:text-hotBurntSienna" href="https://economie.hotnews.ro/">ECONOMIE</a>
     <a class="pr-5 hover:text-hotChateauGreen" href="https://sport.hotnews.ro/">SPORT</a>
@@ -98,7 +99,7 @@
 
   <div class="bg-hotblue">
     <section
-      class="pl-5.5 hidden h-12.3 md:flex mx-auto mb-9  w-976 items-center text-hotWhite text-font15 ">
+      class="pl-5.5 hidden h-12.3 md:flex mx-auto mb-9  w-976 items-center text-hotWhite text-sm-1 ">
       <a class="pr-5 text-hotWebOrange" href="https://www.hotnews.ro/razboi_ucraina">Război în Ucraina</a>
       <a class="pr-5" href="https://www.hotnews.ro/coronavirus">Coronavirus</a>
       <a class="pr-5" href="https://www.hotnews.ro/politic">Politic</a>
@@ -109,7 +110,7 @@
       <a href="https://www.hotnews.ro/administratie_locala">Administrație</a>
     </section>
   </div>
-  <section class="pl-4.5 font-font18  md:hidden font-bold h-12.3 flex items-center ">
+  <section class="pl-4.5 text-base-1  md:hidden font-bold h-12.3 flex items-center ">
     <a class="text-hotPersianBlue pr-2" href="https://www.hotnews.ro/">HOME</a>
     <a href="https://www.hotnews.ro/ultima_ora">ULTIMA ORA</a>
   </section>

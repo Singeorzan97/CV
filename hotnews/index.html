@@ -2,36 +2,110 @@
   <head>
     <title>HotNews.ro</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
+    <link rel="stylesheet" href="hotnews.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
+          // OVERRIDE default font to Inter, san-serif
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+          // EXTEND tailwind properties with these extra classes
           extend: {
+            fontSize: {
+              'sm-1':   '15px',
+              'base-1': '18px'
+            },
+             width: {
+              976: '976px',
+            },
+            padding: {
+              4.5: '19px',
+              5.5: '22px'
+            },
+            height: {
+              12.3: '50px',
+              12.5: '52px',
+              20.5: '90px'
+            },
             colors: {
-              hotblue: '#2145ac',
-              hotgreen: '#3f9863',
-              hotred: '#eb3223'
+              hotblue:           '#2145ac',
+              hotgreen:          '#3f9863',
+              hotred:            '#eb3223',
+              hotblack:          '#393939',
+              hotBurntSienna:    '#ed5c43',
+              hotChateauGreen:   '#36a562',
+              hotMulberry:       '#d0459e',
+              hotCornflowerBlue: '#767fea',
+              hotTundora:        '#484848',
+              hotBarleyCorn:     '#9d8562',
+              hotPersianBlue:    '#2145ac',
+              hotWhite:          '#fff',
+              hotWebOrange:      '#ffa900'
             }
           }
         }
       }
     </script>
   </head>
+
   <body>
     <div class="flex max-w-5xl mx-auto px-4 py-1.5 text-sm font-medium">
-      <div class="flex grow items-center">
+      <div class="flex mx-2 md:mx-5 grow items-center">
         <img src="https://hotnews.ro/static/assets/icons/ic_updated.svg" alt="updated_icon">
         <div class="text-hotblue">Actualizat acum un minut</div>
       </div>
       <div class="flex shrink">
         <div class="text-hotblue pr-1">EUR</div>
-        <div class="text-hotgreen pr-1">4.9395</div>
+        <div class="text-hotgreen pr-1">4.9353</div>
         <div class="text-hotblue pr-1">USD</div>
-        <div class="text-hotred">4.8195</div>
+        <div class="text-hotred">4.8509</div>
       </div>
     </div>
-    <div class='bg-hotblue h-10'>
+    <div class="bg-hotblue">
+      <div class='mx-auto max-w-5xl h-20.5 flex'>
+        <div class="items-center justify-between mx-5 flex grow">
+          <a href="../hotnews/index.html">
+            <img class="md:h-12.5 h-10 cursor-pointer" src="https://www.hotnews.ro/static/assets/logos/hotnews_header.svg"
+              alt="hotnews-logo"></a>
+          <div class="flex shrink">
+            <img class="m-2.5" src="https://www.hotnews.ro/static/assets/icons/ic_search.svg" alt="Search-Icon">
+            <img class="m-2.5" src="https://www.hotnews.ro/static/assets/icons/ic_user.svg" alt="User-Icon">
+            <img class="m-2.5" src="https://www.hotnews.ro/static/assets/icons/ic_menu.svg" alt="Burger-Menu">
+          </div>
+        </div>
+      </div>
     </div>
+
+    <section
+      class=" pl-5.5 hidden text-hotblack mx-auto text-base-1 font-bold md:flex h-12.3 w-976 items-center ">
+      <a class="pr-5 text-hotPersianBlue" href="https://www.hotnews.ro/">HOME</a>
+      <a class="pr-5 hover:text-hotBurntSienna" href="https://economie.hotnews.ro/">ECONOMIE</a>
+      <a class="pr-5 hover:text-hotChateauGreen" href="https://sport.hotnews.ro/">SPORT</a>
+      <a class="pr-5 hover:text-hotMulberry" href="https://life.hotnews.ro/">LIFE</a>
+      <a class="pr-5 hover:text-hotCornflowerBlue" href="https://science.hotnews.ro/">SCIENCE</a>
+      <a class="pr-5 hover:text-hotTundora" href="https://revistapresei.hotnews.ro/">REVISTA PRESEI</a>
+      <a class="hover:text-hotBarleyCorn" href="https://www.hotnews.ro/dosare_juridice">DOSARE JURIDICE</a>
+    </section>
+
+    <div class="bg-hotblue">
+      <section
+        class="pl-5.5 hidden h-12.3 md:flex mx-auto mb-9 w-976 items-center text-hotWhite text-sm-1 ">
+        <a class="pr-5 text-hotWebOrange" href="https://www.hotnews.ro/razboi_ucraina">Război în Ucraina</a>
+        <a class="pr-5" href="https://www.hotnews.ro/coronavirus">Coronavirus</a>
+        <a class="pr-5" href="https://www.hotnews.ro/politic">Politic</a>
+        <a class="pr-5" href="https://www.hotnews.ro/educatie">Educație</a>
+        <a class="pr-5" href="https://www.hotnews.ro/sanatate">Sănătate</a>
+        <a class="pr-5" href="https://www.hotnews.ro/opinii">Opinii</a>
+        <a class="pr-5" href="https://www.hotnews.ro/infrastructura_articole">Infrastructură</a>
+        <a href="https://www.hotnews.ro/administratie_locala">Administrație</a>
+      </section>
+    </div>
+    <section class="pl-4.5 text-base-1 md:hidden font-bold h-12.3 flex items-center ">
+      <a class="text-hotPersianBlue pr-2" href="https://www.hotnews.ro/">HOME</a>
+      <a href="https://www.hotnews.ro/ultima_ora">ULTIMA ORA</a>
+    </section>
   </body>
 </html>
